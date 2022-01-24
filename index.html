@@ -1,16 +1,45 @@
+<!DOCTYPE html>
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+<head>
+	<title>Simple interest Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<h1 align="center" style="color:darkgrey;">Simple Interest calculator</h1>
+	<div class="insection">
+		<div class="amt">
+			 <label for="amount">Enter Total Amount:   </label>
+                <input type="number" name="amount" id="amount" placeholder="Enter Total Amount">
+		</div>
+		<div class="year">
+			 <label for="year">Enter duration:   </label>
+                <input type="number" name="amount" id="year" placeholder="Enter year">
+		</div>
+		<div class="rate">
+			 <label for="rate">Enter rate:   </label>
+                <input type="number" name="amount" id="rate" placeholder="Enter rate">
+		</div>
+		<br>
+		<div class="button">
+			<button onclick="calculate()">calculate</button>
+		</div>
+		<div class="result">
+			<h3 id="si"></h3>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	    function calculate()
+    {
+        let p=document.getElementById('amount').value;
+        let t=document.getElementById('year').value;
+        let r=document.getElementById('rate').value;
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        let  SI=(p*t*r)/100;
 
-        <button onclick="compute()">Compute</button>
-    </body>
+        document.getElementById('si').innerHTML="The Simple Intrest Is: " +SI;
+    }
+</script>
+</body>
 </html>
