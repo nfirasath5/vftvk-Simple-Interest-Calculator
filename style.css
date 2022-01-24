@@ -15,12 +15,12 @@ body{
 }
 .container
 {
-    text-align: center;
+    text-align: left;
     border-radius: 8px;
     box-shadow: none;
     height: 62vh;
     width: 28vw;
-    background: blueviolet
+    background: blueviolet;
 }
 
 .container h1
